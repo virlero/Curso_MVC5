@@ -1,0 +1,20 @@
+﻿@*L20c1b Modificar Propiedades.
+    ? no modelo permitenos recibir nulos*@
+@model DateTime?
+
+@if (!Model.HasValue)
+{
+    <input type="date" id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")" p
+           name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+}
+else
+{
+    <input type="date" value="@Model.Value.ToString("yyyy-MM-dd")"
+           id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")"
+           name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+}
+
+@*Nota:poñemos @ViewData.TemplateInfo para que cando mandemos o objeto hacia o action
+    facendo post poda enviar os valores e propiedades do objeto.
+
+     Ejemplo: <input type="date" value="2001-01-19" id="Propiedad2_Publicacion" name="Propiedad2.Publicacion">*@

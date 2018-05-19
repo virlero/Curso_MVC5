@@ -1,0 +1,31 @@
+﻿@*L23c1c debemos indicar o tipo de modelo que vamos a utilizar*@
+@model APLI_INTRO.Models.Pelicula
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EjemploBeginForm</title>
+</head>
+<body>
+    <br /><br /> <br /><br />
+    <div>
+        <stron>L23c1b BeginForm</stron>por defecto va a ir hacia el mismo action <br />
+        que lo esta llamando pero podemos indicar que action ejecuta, metodo(get,post...). <br />
+        Se encarga de facer a relacion entre cada texbox e a propiedad que lle corresponda
+    </div><br />
+
+    @using (Html.BeginForm())//Html.BeginForm("EjemploBeginForm","Home") podemos indicar a action e o controler por si tivese outro nome distinto ó get:
+    {
+        @*<div>
+            @Html.LabelFor(Model => Model.Titulo)
+            @Html.EditorFor(Model => Model.Titulo) </div> @*Usamos EditorFor en lugar de Editor porque temos un modelo*@
+       
+        @Html.EditorForModel(); //crea o formulario solo, podemos modificalo en EditorTemplates
+       
+        <input type="submit" value="Enviar" />
+    }
+    ------------------------------------------------------------------L23c1b
+</body>
+</html>

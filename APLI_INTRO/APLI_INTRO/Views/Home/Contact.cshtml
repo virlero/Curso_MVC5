@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<hr />
+<h3>Ejemplo L11c1 Post</h3>
+<form action="/home/contact" method="post">
+    <input type="number" id="edad" name="edad" required />
+    <input type="text" id="nombre" name="nombre" />
+    <input type="submit" value="Enviar" />
+    @* cuando le demos a enviar se ejecutará el metodo indicado en la accion *@
+</form>
+<hr />

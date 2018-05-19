@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "pruebaRenderActionA";
+    Layout = null;/*L18c3 Se poñemos RenderAction en Layout podemos crear referencias
+    circulares infinitas hasta que se llena el stack.Esto evita cargar Layout nesta pagina*/
+}
+<br /><br><br /><br>
+<div>
+    <h2>L18c2 pruebaRenderActionA</h2>
+    <p>RenderAction sirve para cargar action dentro de una vista que no es de esa accion</p>
+</div>
+<hr />
+<p>Cargamos B en A </p>
+<div class="panel panel-info">
+    @{Html.RenderAction("pruebaRenderActionB");}
+
+    @*Action lo guarga en una varianle que podemos usar despues.*@
+    @{var prueba=Html.Action("pruebaRenderActionB","Home");} @*se estamos noutro controlador hay que indicalo asi*@
+    @prueba
+</div>
+
+<hr />

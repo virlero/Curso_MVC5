@@ -1,0 +1,101 @@
+﻿@*L1c4 Razor en .net permite escribir código C#  mezclado con html para eso solo
+    temos que poñer un @ diante.
+        para usar as variables en html poñemos @nombre da variable*@
+
+@*L1c5a crearemos un ejemplo de modelo e envíaremolo desde o controlador hacia a vista
+    -boton dereito sobre models e agragamos unha clase*@
+
+
+@*L1c5j indicamos a vista que tipo de modelo ou clase vai a recibir*@
+@*@model APLI_INTRO.Models.Pelicula*@
+
+@*L1c6c indicamos a vista que tipo de modelo ou clase vai a recibir*@
+@model List<APLI_INTRO.Models.Pelicula>
+
+@{
+    ViewBag.Title = "About";
+    string nombre = "Ele";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<h3>Aplicativo de @nombre</h3>
+
+@*L1c5k escribimos os datos da pelicula*@
+@*<h4>@Model.Titulo</h4>
+    <h5>@Model.Duracion</h5>
+    <h5>@Model.Publicacion.ToString("dd/MM/yyyy")</h5>
+    <h5>@Model.Pais</h5>*@
+@*--------------------------------------L1c5k*@
+
+@*L15c1a*@
+<div> Mostrando @Model.Count  pelis</div>
+
+@*L1c6d Mostramos a lista de peliculas nunha tabla*@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Duración</th>
+            <th>País</th>
+            <th>Lanzamiento</th>
+            <th>En cartelera</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var pelicula in Model)
+        {
+            //L15c1b si a pelicula non esta en cartelera clase danger si no vacia
+            var claseFila = (!pelicula.EstaEnCartelera) ? "danger" : string.Empty;
+            //es lo mismo que:
+            /*var claseFila = string.Empty; //creamos variable string vacia nn poñemos @ porque xa estamos nun bloque de código.
+            if (!pelicula.EstaEnCartelera)
+            {
+                claseFila = "danger"; //danger es unha clase de boostrap
+            }*/
+
+
+            <tr class="@claseFila">
+                @*si a pelicula esta en no esta en cartelera se coloca vacio si no danger*@
+                <td>@pelicula.Titulo</td>
+                <td>@pelicula.Duracion</td>
+                <td>@pelicula.Pais</td>
+                <td>@pelicula.Publicacion.ToString("dd/MM/yyyy")</td>
+                <td>@pelicula.EstaEnCartelera</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>NOTA:Colocase en rojo si esta fora de cartelera</p>
+
+@*<h4>@Model[0].Titulo</h4>
+    <h5>@Model[0].Duracion</h5>
+    <h5>@Model[0].Publicacion.ToString("dd/MM/yyyy")</h5>
+    <h5>@Model[0].Pais</h5>*@
+
+@*-------------------------------------------------L1c6d*@
+<hr /><br />
+<p>
+    L19c1b <b>Display</b>   sirve para pasar calquera tipo do controlador a vista <br />
+    El poder de display está en que se pueden pasar objetos o clases. <br />
+    <b> DisplayTemplates:</b>é o nome dunha carpeta na cal colocamos que é o que se supon que queremos <hr />
+    que mvc .net poña en certo tipos de datos determinados ejemplo datetime que o poña como date o boolean como si/no.
+    Se a poñemos na vista Home solo tendra efecto en Home pero se a poñemos na vista shared ten efecto en todas.
+
+    Podemos facer displaytemples para clases.
+</p>
+
+<div><b>variable con display:</b> @Html.Display("Propiedad1")</div>
+
+
+<div><b>clase con display:</b> @Html.Display("Propiedad2")</div>
+@*-------------------------------------------------------------L19c1b*@
+
+<hr /><br />
+<div>L20c1a Editor:Nos mostra unha clase ou objeto con textbox de edicion .<br />
+    EditorTemples para modificar as propiedades de Editor.</div>
+@Html.Editor("Propiedad2")
