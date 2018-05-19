@@ -10,6 +10,7 @@ namespace APLI_INTRO.Models
     public class Pelicula
     {
         //L1c5c  El descriptor de acceso set permite que los miembros de datos se asignen, y el descriptor de acceso get recupera los valores de los miembros de datos.
+        public int Id { get; set; }
         public string Titulo { get; set; }
         public int Duracion { get; set; }
         public DateTime Publicacion { get; set; }

@@ -193,6 +193,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MetodoRedirectController.cs" />
+    <Compile Include="Controllers\PeliculasController.cs" />
     <Compile Include="Controllers\RetornoArchivoController.cs" />
     <Compile Include="Controllers\RetornoJsonController.cs" />
     <Compile Include="Controllers\RetornoStringController.cs" />
@@ -200,6 +201,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\APLI_INTROContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pelicula.cs" />
@@ -391,6 +393,11 @@
     <Content Include="Views\Home\L14_Layout_y_shared.cshtml" />
     <Content Include="Views\Home\pruebaRenderActionA.cshtml" />
     <Content Include="Views\Home\PruebaRenderActionB.cshtml" />
+    <Content Include="Views\Peliculas\Create.cshtml" />
+    <Content Include="Views\Peliculas\Delete.cshtml" />
+    <Content Include="Views\Peliculas\Details.cshtml" />
+    <Content Include="Views\Peliculas\Edit.cshtml" />
+    <Content Include="Views\Peliculas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
