@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=YzC-FYg66xA&index=0&list=PL0kIvpOlieSNWR3YPSjh9P2p43SFnNBlB
+
+Leccion sin comentarios:2,13,25,26
+
+
+
+L25: Facer que o aplicativo sempre que arraque vaia ejecute sempre a mesma vista:
+Btn der no poxecto-propiedades-web-star Url: indicamos a paxina
