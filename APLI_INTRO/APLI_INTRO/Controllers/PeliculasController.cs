@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using APLI_INTRO.Models;
 
 //L27c1a Creamos controlador e vistas con scafolding
-
+//ele
 namespace APLI_INTRO.Controllers
 {
     public class PeliculasController : Controller
@@ -20,7 +20,7 @@ namespace APLI_INTRO.Controllers
          No deberiamos guardar,ni editar. Debemos crear unha clase ou sercio aparte que debe ter este tipo
          de responsabilidades. O controlador simplemente debe chamar a esa clase*/ 
         private APLI_INTROContext db = new APLI_INTROContext();
-        //----------------------------------------------------------------L27c1a
+        //---------------------------------------------------------------L27c1a
         // GET: Peliculas
         public ActionResult Index()
         {
