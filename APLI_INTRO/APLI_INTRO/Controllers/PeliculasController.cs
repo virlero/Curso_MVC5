@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using APLI_INTRO.Models;
 
 //L27c1a Creamos controlador e vistas con scafolding
-//ele
 namespace APLI_INTRO.Controllers
 {
     public class PeliculasController : Controller
@@ -52,10 +51,11 @@ namespace APLI_INTRO.Controllers
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        //L28c2a El token antifalsificación se puede usar para ayudar a proteger la aplicación contra la falsificación de solicitudes entre sitios.
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Titulo,Duracion,Publicacion,Pais,EstaEnCartelera")] Pelicula pelicula)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //L28c2b se nn se cumplen as reglas de validacion nn entra e retornara a vista normal sin grabar.
             {
                 db.Peliculas.Add(pelicula);
                 db.SaveChanges();
