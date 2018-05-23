@@ -398,6 +398,7 @@
     <Content Include="Views\Peliculas\Details.cshtml" />
     <Content Include="Views\Peliculas\Edit.cshtml" />
     <Content Include="Views\Peliculas\Index.cshtml" />
+    <Content Include="Views\Home\PaginaPruebaVista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

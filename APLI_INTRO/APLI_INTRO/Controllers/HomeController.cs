@@ -39,6 +39,12 @@ namespace APLI_INTRO.Controllers
             return View();
         }
 
+        public ActionResult ProbaView()
+        {
+            return View("PaginaPruebaVista");
+          
+        }
+
         public ActionResult EjemploBeginForm()
         {
             return View();
