@@ -26,7 +26,7 @@ namespace EfCodeFirst.Models
  
         //Titulo requerido
         [Required(ErrorMessage ="O campo {0} é obligatorio")] // L34c1a {0} escribe o nome do campo
-        [StringLength(200)]
+        [StringLength(100)]
         public string Titulo { get; set; }
 
         [Required]//contenido requerido
@@ -52,6 +52,8 @@ namespace EfCodeFirst.Models
         //---------------------------------------------------------------L37c1a
         //L38c1a validar  Tarjetas credito
         [CreditCard] //para asegurarnos de que e un numero de tarjeta valido
+        //L42c1 Display sirve tamen para mostrar o nombre da clase na view da foma que queiramos.
+        [Display(Name ="Tarjeta de Credito")]
         public string TarjetaDeCredito { get; set; }
         //---------------------------------------------------------------L38c1a
         /*L39c1a Remote:sive para crear unha validacion personalizada
