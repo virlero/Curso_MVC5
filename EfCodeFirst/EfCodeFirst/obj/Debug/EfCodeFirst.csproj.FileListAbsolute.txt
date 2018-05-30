@@ -100,7 +100,12 @@ C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\es\System.Web.Ra
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\es\System.Web.WebPages.resources.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csprojResolveAssemblyReference.cache
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csproj.CoreCompileInputs.cache
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.pdb
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\en-US\EfCodeFirst.resources.dll
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.Recursos.Recurso.resources
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.Recursos.Recurso.en-US.resources
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csproj.GenerateResource.Cache
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\en-US\EfCodeFirst.resources.dll
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csprojResolveAssemblyReference.cache

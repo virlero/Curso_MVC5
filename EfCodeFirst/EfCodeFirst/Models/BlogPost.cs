@@ -1,4 +1,5 @@
 ﻿using EfCodeFirst.Models.Validaciones;
+using Recursos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -66,6 +67,9 @@ namespace EfCodeFirst.Models
         public int NumeroDivisibleEntre2 { get; set; }
         //---------------------------------------------------------------L39c1a
        
+        //l43c2a ejemplo con salario.           En name colocamos o nombre do campo de recurso.resx
+        [Display(ResourceType =typeof(Recurso),Name = "BlogPost_Salario_Mostrar")]
+        [Required(ErrorMessageResourceType = typeof(Recurso),ErrorMessageResourceName = "BlogPost_salario_MsgRequired")]
         public decimal Salario { get; set; }
         public decimal MontoSolicitudPrestamo { get; set; }
         public DateTime Publicacion { get; set; }

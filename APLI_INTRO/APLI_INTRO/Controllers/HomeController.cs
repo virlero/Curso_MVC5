@@ -31,7 +31,7 @@ namespace APLI_INTRO.Controllers
             //L22c2b
 
             ViewBag.MiListadoEnum = ToListSelectListItem<ResultOpeDropDownList>();
-            //-----------------------------L21c2b
+            //-----------------------------L22c2b
 
             /* return View() .net é o bastante inteligente en que debe retornar a vista Index
               que está na carpeta Home.
