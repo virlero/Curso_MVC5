@@ -1,6 +1,15 @@
 https://www.youtube.com/watch?v=YzC-FYg66xA&index=0&list=PL0kIvpOlieSNWR3YPSjh9P2p43SFnNBlB
 
-Leccion sin comentarios:2,13,25,26
+Leccion sin comentarios:
+2,
+13,
+25,
+26,
+46,
+52, (52-Llaves foraneas y propiedades de navegacion(lazy loading-virtual  y Eager loading-Include).mp4),(Tipos de consulta.docx)
+53, Join - GroupJoin(Tipos de consulta.docx)
+54, ver codigo generado con ToString()(Tipos de consulta.docx)
+55, Querus arbitrarios (libres)(Tipos de consulta.docx)
 
 
 

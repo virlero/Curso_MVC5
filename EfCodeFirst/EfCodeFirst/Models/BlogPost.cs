@@ -21,16 +21,18 @@ namespace EfCodeFirst.Models
 
     Crear DbContext igual que crear unha clase o que a fai especial é que hereda dunha clase DbContext
                     */
-    public class BlogPost: IValidatableObject //L41c1a Validaciones complejas añadimos :IValidatableObject, esto o que fai he heredar da clase indicada
+    public class BlogPost : IValidatableObject //L41c1a Validaciones complejas añadimos :IValidatableObject, esto o que fai he heredar da clase indicada
     {
         public int Id { get; set; }
- 
+
         //Titulo requerido
-        [Required(ErrorMessage ="O campo {0} é obligatorio")] // L34c1a {0} escribe o nome do campo
+        [Required(ErrorMessage = "O campo {0} é obligatorio")] // L34c1a {0} escribe o nome do campo
         [StringLength(100)]
         public string Titulo { get; set; }
 
         [Required]//contenido requerido
+        //L45c1 DataType permite especificar o tipo de dato o cal queremos ingresar
+        [DataType(DataType.MultilineText)]
         public string Contenido { get; set; }
 
         [StringLength(100, MinimumLength = 3,
@@ -39,7 +41,7 @@ namespace EfCodeFirst.Models
         public string Autor { get; set; }
 
         //L36c1 rango: se queremos establecer o maximo posible abria que poñer int.MaxValue,double.maxValue. 
-        [Range(18,100,ErrorMessage ="O rango de {0} ten que ser entre {1} e {2}")]
+        [Range(18, 100, ErrorMessage = "O rango de {0} ten que ser entre {1} e {2}")]
         public int Edad { get; set; }
 
         //L37c1a Compare sive para comparar valores de propiedades do noso modelo
@@ -47,32 +49,38 @@ namespace EfCodeFirst.Models
         public string Email { get; set; }
 
         [NotMapped] //Sirve para nn incluir o campo en BBDD
-        [System.ComponentModel.DataAnnotations.Compare("Email",ErrorMessage ="Os Emails nn concordan")]
+        [System.ComponentModel.DataAnnotations.Compare("Email", ErrorMessage = "Os Emails nn concordan")]
         public string ConfirmarEmail { get; set; }
 
         //---------------------------------------------------------------L37c1a
         //L38c1a validar  Tarjetas credito
         [CreditCard] //para asegurarnos de que e un numero de tarjeta valido
         //L42c1 Display sirve tamen para mostrar o nombre da clase na view da foma que queiramos.
-        [Display(Name ="Tarjeta de Credito")]
+        [Display(Name = "Tarjeta de Credito")]
         public string TarjetaDeCredito { get; set; }
         //---------------------------------------------------------------L38c1a
         /*L39c1a Remote:sive para crear unha validacion personalizada
             a desventaja é que solo funciona no lado do cliente(solo no navegador)
             Se o usuario nn esta usuarndo javascript no navegador esta validacion nn funciona e se non temos
             activado o jqueryvalidation tampouco*/
-                                    //controlador blogpost
-        [Remote("DivisibleEntre2","Blogpost",ErrorMessage ="Debe ser un número divisible entre 2 validacion desde cliente")]
-        [DivisibleEntre(2,ErrorMessage = "Debe ser un número divisible entre 2 validacion desde servidor")] //L40c1b agregamos a validacion dende o servidor
+        //controlador blogpost
+        [Remote("DivisibleEntre2", "Blogpost", ErrorMessage = "Debe ser un número divisible entre 2 validacion desde cliente")]
+        [DivisibleEntre(2, ErrorMessage = "Debe ser un número divisible entre 2 validacion desde servidor")] //L40c1b agregamos a validacion dende o servidor
         public int NumeroDivisibleEntre2 { get; set; }
         //---------------------------------------------------------------L39c1a
-       
+
         //l43c2a ejemplo con salario.           En name colocamos o nombre do campo de recurso.resx
-        [Display(ResourceType =typeof(Recurso),Name = "BlogPost_Salario_Mostrar")]
-        [Required(ErrorMessageResourceType = typeof(Recurso),ErrorMessageResourceName = "BlogPost_salario_MsgRequired")]
+        [Display(ResourceType = typeof(Recurso), Name = "BlogPost_Salario_Mostrar")]
+        [Required(ErrorMessageResourceType = typeof(Recurso), ErrorMessageResourceName = "BlogPost_salario_MsgRequired")]
         public decimal Salario { get; set; }
         public decimal MontoSolicitudPrestamo { get; set; }
         public DateTime Publicacion { get; set; }
+
+
+        [NotMapped] //Sirve para que nn se cree o campo en BBDD
+        //L44c1 ScaffoldColumn:Serve para ignorar o campo na creacion das vistas.Por defecto está a true.
+        [ScaffoldColumn(false)]
+        public string CampoSecreto{get;set;}
 
         public List<Comentario> Comentarios { get; set; }//L33c7b para un blogpost podremos traer todolos comentarios que lle corresponden
 
@@ -80,7 +88,7 @@ namespace EfCodeFirst.Models
         {
             //L41c1c añadimos validaciones
             var errores = new List<ValidationResult>();
-            
+             
             if (Salario * 4 < MontoSolicitudPrestamo)
             {
                 errores.Add(new ValidationResult("El monto solicitud préstamo no debe exceder 4 veces el salario",

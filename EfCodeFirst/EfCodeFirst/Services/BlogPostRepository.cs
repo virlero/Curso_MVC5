@@ -29,7 +29,6 @@ namespace EfCodeFirst.Services
                                                                        //Mellor e con lambda porque se cambiamos o nome da tabla comentarios
                                                                        //se cambiaria automaticamente.Cun string non se cambia
                 //---------------------------------------L33c7f
-
             }
         }
         //---------------------------------------------L33c5e
@@ -39,6 +38,12 @@ namespace EfCodeFirst.Services
         {
             using (var db = new BlogContext())
             {
+                /*L48c1 Crear. Podemos agregar mais de unha persoa a ves, ejemplo:
+                    var ListaBlogPosts =new List<BlogPost>(){model}; //añadimos a  lista o que recibimos polo formulario
+                    ListaBlogPosts.Add(new BlogPost(){campos="xxxxxxx",fecha =new DateTime(2018,05,01)})//añadimos unha nova  persoa a lista
+                    db=BlogPosts.AddRange(ListaBlogPosts);//con AddRange podemos añadir unha lista de persoas a BBDD
+                    db.SaveChanges
+                 */
                 db.BlogPosts.Add(model);
                 db.SaveChanges();
             }

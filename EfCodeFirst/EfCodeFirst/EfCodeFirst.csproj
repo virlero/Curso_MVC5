@@ -206,6 +206,7 @@
     <Content Include="Views\BlogPost\Index.cshtml" />
     <Content Include="Views\BlogPost\Create.cshtml" />
     <Content Include="Views\BlogPost\Edit.cshtml" />
+    <Content Include="Views\BlogPost\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
