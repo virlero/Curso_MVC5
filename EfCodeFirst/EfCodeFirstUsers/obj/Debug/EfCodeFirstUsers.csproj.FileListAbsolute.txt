@@ -173,7 +173,7 @@ C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\bin\es\Microsof
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\obj\Debug\EfCodeFirstUsers.csprojResolveAssemblyReference.cache
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\obj\Debug\EfCodeFirstUsers.csproj.CoreCompileInputs.cache
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\obj\Debug\EfCodeFirstUsers.dll
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\obj\Debug\EfCodeFirstUsers.pdb
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirstUsers\obj\Debug\EfCodeFirstUsers.csprojResolveAssemblyReference.cache

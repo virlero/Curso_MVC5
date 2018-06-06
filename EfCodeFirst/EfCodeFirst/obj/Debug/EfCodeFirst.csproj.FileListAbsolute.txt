@@ -108,4 +108,9 @@ C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirs
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.Recursos.Recurso.en-US.resources
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csproj.GenerateResource.Cache
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\en-US\EfCodeFirst.resources.dll
-C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csprojResolveAssemblyReference.cache
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Net.Http.Formatting.dll
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.dll
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.WebHost.dll
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Net.Http.Formatting.xml
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.xml
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.WebHost.xml

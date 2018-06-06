@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<!--L43c1a
+
+Aprenderemos a colocar contenido personalizado según o idioma do navegador que use o usuario.
+
+Creamos a carpeta recursos e dentro creamos archivos.resx, hay que crear tantos archivos como idiomas
+queremos usar.
+
+El idioma por defecto tiene el nombre del archivo pero  si queremos configurar la pagina para otros idiomas,
+tenemos que crear tantos archivos como idiomas.
+
+Ejemplo para ingles de EEUU  Recurso.en-US.resx
+
+Nota: hay que configurar o archivo de recurso para poder utilizalo desde donde queiramos.
+        btn der en Recursos.resx /propiedades "ResXFileCodeGenerator" cambialo por  "public ResXFileCodeGenerator",
+        En namespace podemos poner o namespace donde queremos que esté o noso archivo de recurso (Recurso)
+-->
+<hr />
+@Recursos.Recurso.String1
+<br />Segun o idioma do navegador saldra o mensaxe co idioma.
+<hr />
+
