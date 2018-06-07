@@ -35,13 +35,19 @@ namespace EfCodeFirst.Models
                                    con nuestra BBDD.
                                    
              Ejecutar PM>update-database: los datetimes los pone en datetime2 y si una propiedad int donde el nombre 
-                               empieza por "Codigo" se configurará como primary jey*/
+                               empieza por "Codigo" se configurará como primary key*/
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Properties<DateTime>().Configure(x => x.HasColumnType("datetime2"));
 
             modelBuilder.Properties<int>().Where(p => p.Name.StartsWith("Codigo"))
                     .Configure(p => p.IsKey());
+
+            /*  //las claves foraneas se crean solas indicando los campos en los modelos pero tambien
+             *  podemos crearlas asi:(ejemplo con unha clase persona dicreciones e subdirecciones)
+                  modeBuilder.Entity<Direccion>().HasRequired(x=>x.Persona);
+                  modeBuilder.Entity<SubDireccion>().HasRequired(x=>x.Direccion);
+            */
 
             base.OnModelCreating(modelBuilder);
         }

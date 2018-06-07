@@ -114,3 +114,4 @@ C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Net.Http.Formatting.xml
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.xml
 C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\bin\System.Web.Http.WebHost.xml
+C:\Users\pc\source\repos\Curso_MVC5\EfCodeFirst\EfCodeFirst\obj\Debug\EfCodeFirst.csprojResolveAssemblyReference.cache

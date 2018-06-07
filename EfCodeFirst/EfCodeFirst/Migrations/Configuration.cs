@@ -22,8 +22,8 @@ namespace EfCodeFirst.Migrations
                     Add-Migration
                     Update-Database (con este seria suficiente)3a
            */
-
-                      AutomaticMigrationsEnabled = true;
+            // L59c1 poñemola a false.Ejecutamos PM > Add-migration -Name MigracionInicial. si a poñemos a false estamos obligados a añadir unha migracion para facer update-database
+            AutomaticMigrationsEnabled = false;
 
 
 
