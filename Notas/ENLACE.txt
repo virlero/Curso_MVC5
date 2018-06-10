@@ -10,6 +10,9 @@ Leccion sin comentarios:
 53, Join - GroupJoin(Tipos de consulta.docx)
 54, ver codigo generado con ToString()(Tipos de consulta.docx)
 55, Querus arbitrarios (libres)(Tipos de consulta.docx)
+60, ver video.
+61, L61-API FLUENTE, creacion de keys simple e compostas, propiedades campos.docx
+67,
 
 
 

@@ -1,0 +1,34 @@
+﻿@* L65c6 añadirmos a clase *@
+@model IndexViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<h4>Filtrar</h4>
+@using (Html.BeginForm(null, null, FormMethod.Get))
+{
+    <label for="edad">Edad</label>
+    <input type="number" name="edad" id="edad" />
+    <input type="submit" value="Filtrar" class="btn btn-success" />
+}
+<h4>Resultados</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persona in Model.Personas)//L65c7 recorremos o modelo mostrando os datos devoltos
+        {
+            <tr>
+                <td>@persona.Id</td>
+                <td>@persona.Nombre</td>
+                <td>@persona.Edad</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*L65c8 añadimos a vista do paginador  *@
+@{Html.RenderPartial("_paginador", Model);}

@@ -24,6 +24,8 @@ namespace EfCodeFirst.Models
                 :base("cadenaconexion1") 
             {
             }
+
+            -Debemos ejecutar enable-migration
             */
         public BlogContext()
             :base("cadenaconexion1")
