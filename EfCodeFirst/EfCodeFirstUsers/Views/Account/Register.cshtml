@@ -1,4 +1,6 @@
-﻿@model EfCodeFirstUsers.Models.RegisterViewModel
+﻿@* L71c2 debemos ir a vista donde se registran los usuarios para añadir el campo
+    f12 RegisterViewModel levaranos a AccountViewModels.cs*@
+@model EfCodeFirstUsers.Models.RegisterViewModel
 @{
     ViewBag.Title = "Registrarse";
 }
@@ -29,6 +31,14 @@
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
+    //L71c4 añadirmos o campo ó formulario
+    <div class="form-group">
+        @Html.LabelFor(m => m.LugarDeNacimiento, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LugarDeNacimiento, new { @class = "form-control" })
+        </div>
+    </div>
+    //-------------------------------------------------------------L74c4
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Registrarse" />

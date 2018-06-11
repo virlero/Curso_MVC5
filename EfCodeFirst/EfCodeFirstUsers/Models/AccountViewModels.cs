@@ -79,6 +79,10 @@ namespace EfCodeFirstUsers.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        //L71c3 agregamos o novo campo
+        [StringLength(120)]
+        public string LugarDeNacimiento { get; set; }
     }
 
     public class ResetPasswordViewModel

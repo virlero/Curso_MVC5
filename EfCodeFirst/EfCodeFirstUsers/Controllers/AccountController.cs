@@ -151,7 +151,8 @@ namespace EfCodeFirstUsers.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                //L71c5 pasamos o novo campo (LugarDeNacimiento a la funcion de creado)
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, LugarDeNacimiento=model.LugarDeNacimiento };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
